@@ -24,8 +24,14 @@ const firebaseConfig = {
     appId: "1:398740179487:web:192f57a4c9478fa6"
 };
 
+// initalizting connection
 firebase.initializeApp(firebaseConfig);
+// creating a db constant to be assible by everyone
+const db = firebase.firestore();
 
+ReactDOM.render(
+    <Router>
+        <App />
+    </Router>, document.getElementById('root'));
 
-ReactDOM.render(<Router><App /></Router>, document.getElementById('root'));
 registerServiceWorker();
